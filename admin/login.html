@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Josephine Lounge — Operations Portal</title>
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Fonts: italic weights for Cormorant Garamond -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@400;500;600;700&display=swap">
+
+  <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+<body class="login-page">
+
+  <div class="login-card">
+
+    <!-- Logo with glow -->
+    <div class="login-logo-wrap">
+      <picture>
+        <source srcset="../assets/logo/logo.webp" type="image/webp">
+        <img src="../assets/logo/logo.png" alt="Josephine Lounge" class="login-logo" width="110" height="110">
+      </picture>
+    </div>
+
+    <!-- Brand name -->
+    <div class="login-name">Josephine</div>
+    <div class="login-lounge">Lounge</div>
+
+    <!-- Gold gem divider -->
+    <div class="login-divider" aria-hidden="true">
+      <div class="login-divider-gem"></div>
+    </div>
+
+    <p class="login-portal-label">Operations Portal</p>
+
+    <!-- Password field -->
+    <div class="login-field">
+      <label for="password">Access Code</label>
+      <input
+        type="password"
+        id="password"
+        placeholder="••••••••••"
+        autocomplete="current-password"
+        autofocus
+        spellcheck="false"
+      >
+    </div>
+
+    <!-- Enter button -->
+    <button class="login-btn" id="loginBtn" onclick="doLogin()">
+      <span id="loginLabel">Enter</span>
+    </button>
+
+    <!-- Error message -->
+    <div class="login-error" id="loginError" role="alert">
+      Incorrect access code. Please try again.
+    </div>
+
+    <!-- Footer note -->
+    <p class="login-footer-note">Josephine Lounge · Atlanta, GA · Private Access</p>
+    <p class="login-footer-note" style="margin-top:0.5rem;opacity:0.55">
+      Site by <a href="https://www.umojaserv.com" target="_blank" rel="noopener noreferrer" style="color:inherit;border-bottom:1px solid rgba(200,169,92,0.3);transition:color 0.2s,border-color 0.2s" onmouseover="this.style.color='#C8A95C';this.style.borderColor='rgba(200,169,92,0.7)'" onmouseout="this.style.color='';this.style.borderColor='rgba(200,169,92,0.3)'">UmojaServ</a>
+    </p>
+
+  </div>
+
+  <script>
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxyCTKaZMis5CexOKllmZpBCcY2fwnkVh6OXQasUfVWoA0ovqCy-Wjr-naXVHCQsaCCIg/exec';
+
+    async function doLogin() {
+      const password = document.getElementById('password').value;
+      const btn      = document.getElementById('loginBtn');
+      const label    = document.getElementById('loginLabel');
+      const error    = document.getElementById('loginError');
+
+      if (!password) {
+        document.getElementById('password').focus();
+        return;
+      }
+
+      btn.disabled = true;
+      label.innerHTML = '<span class="loading-spin" style="width:14px;height:14px"></span>';
+      error.classList.remove('visible');
+
+      try {
+        const res  = await fetch(`${SCRIPT_URL}?action=login&password=${encodeURIComponent(password)}`);
+        const data = await res.json();
+
+        if (data.success && data.authenticated) {
+          sessionStorage.setItem('jl_admin_token',  data.token);
+          sessionStorage.setItem('jl_admin_expiry', data.expiry);
+          label.textContent = '✓';
+          setTimeout(() => { window.location.href = 'dashboard.html'; }, 350);
+        } else {
+          error.classList.add('visible');
+          label.textContent = 'Enter';
+          btn.disabled = false;
+          document.getElementById('password').value = '';
+          document.getElementById('password').focus();
+
+          document.querySelector('.login-card').classList.add('shake');
+          setTimeout(() => document.querySelector('.login-card').classList.remove('shake'), 500);
+        }
+      } catch (e) {
+        error.textContent = 'Connection error — check your internet and try again.';
+        error.classList.add('visible');
+        label.textContent = 'Enter';
+        btn.disabled = false;
+      }
+    }
+
+    document.getElementById('password').addEventListener('keydown', e => {
+      if (e.key === 'Enter') doLogin();
+    });
+
+    const tok = sessionStorage.getItem('jl_admin_token');
+    const exp = sessionStorage.getItem('jl_admin_expiry');
+    if (tok && exp && new Date() < new Date(exp)) {
+      window.location.href = 'dashboard.html';
+    }
+  </script>
+
+  <style>
+    @keyframes shake {
+      0%,100% { transform: translateX(0); }
+      20%      { transform: translateX(-8px); }
+      40%      { transform: translateX(8px); }
+      60%      { transform: translateX(-5px); }
+      80%      { transform: translateX(5px); }
+    }
+    .login-card.shake { animation: shake 0.45s var(--ease); }
+  </style>
+</body>
+</html>
