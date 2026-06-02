@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#080808">
+  <meta name="description" content="Host your private event at Josephine Lounge — birthday celebrations, corporate events, venue buyouts, VIP bottle service, and watch parties in Brookhaven, Atlanta.">
+  <link rel="canonical" href="https://seashell-owl-921091.hostingersite.com/pages/private-events.html">
+  <link rel="icon" type="image/webp" href="../assets/logo/logo.webp">
+  <link rel="apple-touch-icon" href="../assets/logo/logo.png">
+  <meta property="og:title" content="Private Events — Josephine Lounge Atlanta">
+  <meta property="og:description" content="Birthday celebrations, corporate events, venue buyouts, and VIP packages at Josephine Lounge, Brookhaven, Atlanta.">
+  <meta property="og:image" content="https://josephineatl.com/assets/images/vip-section.webp">
+  <title>Private Events &amp; Celebrations — Josephine Lounge Atlanta</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Montserrat:wght@300;500;600&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Montserrat:wght@300;500;600&display=swap"></noscript>
+  <link rel="stylesheet" href="../assets/css/style.css?v=20260601-2" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="../assets/css/style.css?v=20260601-2"></noscript>
+
+  <style>
+    :root{color-scheme:dark;--black:#080808;--dark:#0d0d0d;--charcoal:#141414;--card:#111111;--border:rgba(200,169,92,.15);--border-dark:rgba(255,255,255,.06);--gold:#C8A95C;--gold-light:#D4BF7A;--gold-dim:rgba(200,169,92,.12);--cream:#F0E6D3;--white:#fff;--off-white:rgba(255,255,255,.88);--muted:rgba(255,255,255,.45);--font-serif:'Cormorant Garamond',Georgia,serif;--font-sans:'Montserrat',-apple-system,sans-serif;--ease:cubic-bezier(.25,.46,.45,.94);--ease-out:cubic-bezier(.16,1,.3,1);--nav-h:80px;--section-x:clamp(20px,6vw,80px)}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;scroll-padding-top:var(--nav-h)}
+    body{background:var(--black);color:var(--white);font-family:var(--font-sans);font-weight:300;font-size:16px;line-height:1.75;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+    img{display:block;max-width:100%;height:auto}
+    a{color:inherit;text-decoration:none}
+    ul{list-style:none}
+    button{cursor:pointer;border:none;background:none;font-family:inherit}
+    h1,h2,h3,h4{font-family:var(--font-serif);font-weight:300;line-height:1.1;letter-spacing:.01em}
+    p{color:var(--off-white)}
+
+    /* NAV */
+    #nav{position:fixed;top:0;left:0;right:0;z-index:1000;transition:background .5s var(--ease)}
+    #nav.scrolled{background:rgba(8,8,8,.92);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:var(--nav-h);padding:0 var(--section-x);max-width:1400px;margin:0 auto;width:100%}
+    .nav-logo img{height:60px;width:auto;object-fit:contain;filter:brightness(1.1) drop-shadow(0 0 12px rgba(200,169,92,.2));transition:filter .3s}
+    .nav-links{display:flex;align-items:center;gap:36px}
+    .nav-links a{font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--off-white);transition:color .3s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .nav-links .nav-cta{background:transparent;border:1px solid var(--gold);color:var(--gold);padding:10px 22px;font-size:10px;transition:all .35s var(--ease)}
+    .nav-links .nav-cta:hover{background:var(--gold);color:var(--black)}
+    .nav-toggle{display:none;flex-direction:column;gap:6px;padding:4px;min-width:44px;min-height:44px;align-items:center;justify-content:center}
+    .nav-toggle span{display:block;width:24px;height:1px;background:#fff;transition:all .35s var(--ease);transform-origin:center}
+    .nav-toggle.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .nav-toggle.active span:nth-child(2){opacity:0;transform:scaleX(0)}
+    .nav-toggle.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .mobile-menu{position:fixed;inset:0;background:rgba(8,8,8,.97);backdrop-filter:blur(20px);z-index:999;display:flex;flex-direction:column;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:all .45s var(--ease);pointer-events:none}
+    .mobile-menu.open{opacity:1;visibility:visible;pointer-events:auto}
+    .mobile-menu ul{display:flex;flex-direction:column;align-items:center;gap:28px}
+    .mobile-menu a{font-family:var(--font-serif);font-size:clamp(28px,7vw,48px);font-weight:300;color:var(--off-white);letter-spacing:.04em;transition:color .3s;min-height:44px;display:flex;align-items:center}
+    .mobile-menu a:hover{color:var(--gold)}
+    .mobile-menu-cta{margin-top:40px;display:flex;flex-direction:column;align-items:center;gap:12px}
+    .mobile-menu-info{font-size:11px;letter-spacing:.15em;color:var(--muted);text-transform:uppercase;text-align:center}
+
+    /* BUTTONS */
+    .btn{display:inline-flex;align-items:center;justify-content:center;font-family:var(--font-sans);font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;padding:16px 36px;border:1px solid transparent;transition:all .35s var(--ease);min-height:44px;touch-action:manipulation}
+    .btn-gold{background:var(--gold);color:var(--black);border-color:var(--gold)}
+    .btn-gold:hover{background:var(--gold-light);transform:translateY(-1px);box-shadow:0 8px 30px rgba(200,169,92,.3)}
+    .btn-outline{background:transparent;color:var(--white);border-color:rgba(255,255,255,.35)}
+    .btn-outline:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-1px)}
+
+    /* HERO */
+    .pe-hero {
+      position: relative;
+      height: 70vh;
+      min-height: 500px;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+    }
+    .pe-hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('../assets/images/vip-section.webp');
+      background-size: cover;
+      background-position: center 30%;
+      transform: scale(1.05);
+      animation: subtle-zoom 12s ease-out forwards;
+    }
+    @keyframes subtle-zoom { from{transform:scale(1.05)} to{transform:scale(1)} }
+    .pe-hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(8,8,8,0.92) 0%, rgba(8,8,8,0.4) 50%, rgba(8,8,8,0.2) 100%);
+    }
+    .pe-hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 0 var(--section-x) 64px;
+      max-width: 1400px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .pe-hero-eyebrow {
+      display: block;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 14px;
+    }
+    .pe-hero-title {
+      font-size: clamp(40px, 7vw, 90px);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--white);
+      line-height: 1.0;
+      margin-bottom: 20px;
+    }
+    .pe-hero-sub {
+      font-size: 14px;
+      color: var(--off-white);
+      max-width: 480px;
+      margin-bottom: 32px;
+    }
+    .pe-hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    /* BODY */
+    .pe-body {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 var(--section-x);
+    }
+
+    /* PACKAGES */
+    .pe-packages {
+      padding: 80px 0 64px;
+    }
+    .pe-section-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 12px;
+    }
+    .pe-section-title {
+      font-size: clamp(32px, 5vw, 56px);
+      font-weight: 300;
+      color: var(--white);
+      margin-bottom: 48px;
+    }
+    .pe-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .pe-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 36px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.4s var(--ease), transform 0.4s var(--ease), box-shadow 0.4s;
+    }
+    .pe-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(to right, transparent, var(--gold), transparent);
+      transform: scaleX(0);
+      transition: transform 0.5s var(--ease);
+    }
+    .pe-card:hover::before { transform: scaleX(1); }
+    .pe-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.4), 0 0 30px var(--gold-dim);
+    }
+    .pe-card.featured {
+      background: linear-gradient(135deg, #141414 0%, #0f0f0f 100%);
+      border-color: rgba(200,169,92,0.3);
+    }
+    .pe-card-icon { font-size: 28px; margin-bottom: 20px; }
+    .pe-card-name {
+      font-family: var(--font-serif);
+      font-size: 24px;
+      font-weight: 300;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+    .pe-card-desc {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 24px;
+      flex: 1;
+    }
+    .pe-card-features {
+      list-style: none;
+      margin-bottom: 28px;
+    }
+    .pe-card-features li {
+      font-size: 12px;
+      color: rgba(255,255,255,0.6);
+      padding: 7px 0;
+      border-bottom: 1px solid var(--border-dark);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .pe-card-features li::before {
+      content: '';
+      display: inline-block;
+      width: 16px;
+      height: 1px;
+      background: var(--gold);
+      flex-shrink: 0;
+    }
+
+    /* EVENT TYPES */
+    .pe-types {
+      padding: 64px 0;
+      border-top: 1px solid var(--border-dark);
+    }
+    .pe-types-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      border: 1px solid var(--border-dark);
+      margin-top: 48px;
+    }
+    .pe-type-card {
+      padding: 32px 24px;
+      background: var(--card);
+      text-align: center;
+      transition: background 0.3s;
+    }
+    .pe-type-card:hover { background: #141414; }
+    .pe-type-icon { font-size: 28px; margin-bottom: 12px; }
+    .pe-type-name {
+      font-family: var(--font-serif);
+      font-size: 18px;
+      font-weight: 300;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+    .pe-type-desc { font-size: 12px; color: var(--muted); line-height: 1.7; }
+
+    /* INQUIRY FORM */
+    .pe-form-section {
+      padding: 80px 0 100px;
+      border-top: 1px solid var(--border-dark);
+    }
+    .pe-form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .pe-form-intro h2 {
+      font-size: clamp(32px, 5vw, 60px);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--white);
+      margin-bottom: 20px;
+      line-height: 1.05;
+    }
+    .pe-form-intro p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.9;
+      margin-bottom: 32px;
+    }
+    .pe-contact-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+    .pe-contact-item strong { color: var(--off-white); font-weight: 400; }
+
+    /* FORM */
+    .pe-form { display: flex; flex-direction: column; gap: 16px; }
+    .pe-form-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      display: block;
+      margin-bottom: 8px;
+    }
+    .pe-form-optional {
+      font-size: 9px;
+      letter-spacing: 0.1em;
+      color: rgba(255,255,255,.2);
+      font-weight: 400;
+      text-transform: uppercase;
+      margin-left: 6px;
+    }
+    .pe-form-group { display: flex; flex-direction: column; }
+    .pe-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .pe-input, .pe-select, .pe-textarea {
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,.06);
+      color: var(--white);
+      padding: 14px 18px;
+      font-family: var(--font-sans);
+      font-size: 14px;
+      font-weight: 300;
+      outline: none;
+      transition: border-color 0.3s, box-shadow 0.3s;
+      width: 100%;
+      -webkit-appearance: none;
+      appearance: none;
+      color-scheme: dark;
+    }
+    .pe-input:focus, .pe-select:focus, .pe-textarea:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 1px rgba(200,169,92,0.2);
+    }
+    .pe-input::placeholder, .pe-textarea::placeholder { color: var(--muted); }
+    .pe-select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23C8A95C' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+      padding-right: 40px;
+      cursor: pointer;
+    }
+    .pe-select option { background: #141414; color: var(--white); }
+    .pe-textarea { resize: vertical; min-height: 110px; }
+    .pe-submit {
+      background: var(--gold);
+      color: var(--black);
+      border: none;
+      padding: 18px 36px;
+      font-family: var(--font-sans);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.35s var(--ease);
+      min-height: 52px;
+      width: 100%;
+    }
+    .pe-submit:hover:not(:disabled) { background: var(--gold-light); transform: translateY(-1px); box-shadow: 0 8px 30px rgba(200,169,92,.3); }
+    .pe-submit:disabled { opacity: 0.55; cursor: not-allowed; }
+    .pe-consent {
+      font-size: 11px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+    .pe-consent a { color: var(--gold); border-bottom: 1px solid rgba(200,169,92,0.3); }
+
+    /* FOOTER */
+    footer{background:#050505;border-top:1px solid var(--border-dark);padding:48px 0 32px}
+    .footer-simple{max-width:1400px;margin:0 auto;padding:0 var(--section-x);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px}
+    .footer-simple-left img{height:44px;width:auto;filter:brightness(0.85)}
+    .footer-simple-copy{font-size:11px;color:rgba(255,255,255,.2);letter-spacing:.05em}
+    .footer-simple-links{display:flex;gap:24px}
+    .footer-simple-links a{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.25);transition:color .3s}
+    .footer-simple-links a:hover{color:var(--gold)}
+    .footer-credit{text-align:center;margin-top:24px;padding-top:20px;border-top:1px solid rgba(200,169,92,.08);font-size:11px;color:rgba(255,255,255,.15)}
+    .footer-credit a{color:rgba(200,169,92,.4);border-bottom:1px solid rgba(200,169,92,.18);transition:color .25s}
+    .footer-credit a:hover{color:var(--gold)}
+
+    @media(max-width:1024px){
+      .pe-grid{grid-template-columns:1fr 1fr}
+      .pe-types-grid{grid-template-columns:repeat(2,1fr)}
+      .pe-form-grid{grid-template-columns:1fr;gap:48px}
+    }
+    @media(max-width:768px){
+      :root{--nav-h:64px}
+      .nav-links{display:none}
+      .nav-toggle{display:flex}
+      .nav-logo img{height:48px}
+      .pe-grid{grid-template-columns:1fr}
+      .pe-form-row{grid-template-columns:1fr}
+      .pe-hero-ctas{flex-direction:column}
+      .pe-hero-ctas .btn{width:100%}
+      .footer-simple{flex-direction:column;text-align:center}
+      .footer-simple-links{justify-content:center}
+    }
+  </style>
+  <link rel="stylesheet" href="../assets/css/mobile-nav.css?v=20260601-2">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo" aria-label="Josephine Lounge — Home">
+        <picture>
+          <source srcset="../assets/logo/logo.webp" type="image/webp">
+          <img src="../assets/logo/logo.png" alt="Josephine Lounge" width="60" height="60" decoding="async">
+        </picture>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="events.html">Events</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="private-events.html" class="active">Private Events</a></li>
+        <li><a href="worldcup.html">World Cup</a></li>
+        <li><a href="#inquiry" class="nav-cta">Inquire</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <ul role="list">
+      <li><a href="events.html" class="mobile-link">Events</a></li>
+      <li><a href="gallery.html" class="mobile-link">Gallery</a></li>
+      <li><a href="menu.html" class="mobile-link">Menu</a></li>
+      <li><a href="private-events.html" class="mobile-link">Private Events</a></li>
+      <li><a href="worldcup.html" class="mobile-link">World Cup 2026</a></li>
+      <li><a href="../careers.html" class="mobile-link">Join the Team</a></li>
+      <li><a href="#inquiry" class="mobile-link">Inquire Now</a></li>
+    </ul>
+    <div class="mobile-menu-cta">
+      <a href="#inquiry" class="btn btn-gold mobile-link" style="min-width:200px;justify-content:center;">Plan Your Event</a>
+      <a href="tel:+16789734441" class="mobile-phone-link">(678) 973-4441</a>
+      <p class="mobile-menu-info">Fri – Sun &nbsp;·&nbsp; 8PM – 2:30AM</p>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <header class="pe-hero" role="banner">
+    <div class="pe-hero-bg" aria-hidden="true"></div>
+    <div class="pe-hero-overlay" aria-hidden="true"></div>
+    <div class="pe-hero-content">
+      <span class="pe-hero-eyebrow">Josephine Lounge · Private Events</span>
+      <h1 class="pe-hero-title">Your Night.<br>Your Vision.</h1>
+      <p class="pe-hero-sub">From intimate birthday celebrations to full venue buyouts — Josephine's concierge team handles every detail so you arrive to perfection.</p>
+      <div class="pe-hero-ctas">
+        <a href="#inquiry" class="btn btn-gold">Plan Your Event</a>
+        <a href="tel:+16789734441" class="btn btn-outline">Call Us Directly</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="pe-body">
+
+      <!-- PACKAGES -->
+      <section class="pe-packages" aria-label="Event packages">
+        <span class="pe-section-label">Exclusive Packages</span>
+        <h2 class="pe-section-title">Choose Your Experience</h2>
+
+        <div class="pe-grid">
+          <div class="pe-card">
+            <div class="pe-card-icon" aria-hidden="true">🥂</div>
+            <h3 class="pe-card-name">Classic Birthday</h3>
+            <p class="pe-card-desc">An unforgettable celebration with your crew, designed and delivered Josephine style. Perfect for groups of 10–25.</p>
+            <ul class="pe-card-features" role="list">
+              <li>Reserved VIP table</li>
+              <li>Birthday banner &amp; setup</li>
+              <li>Dedicated bottle host</li>
+              <li>Priority entry</li>
+              <li>Personalized experience</li>
+            </ul>
+            <a href="#inquiry" class="btn btn-outline" style="width:100%">Inquire Now</a>
+          </div>
+
+          <div class="pe-card featured">
+            <div class="pe-card-icon" aria-hidden="true">👑</div>
+            <h3 class="pe-card-name">Grand Birthday</h3>
+            <p class="pe-card-desc">The full Josephine treatment — elite seating, premium service, and maximum impact. For the celebration that demands the extraordinary.</p>
+            <ul class="pe-card-features" role="list">
+              <li>Premium section seating</li>
+              <li>Custom décor &amp; sparklers</li>
+              <li>Dedicated VIP host &amp; server</li>
+              <li>Bottle service package</li>
+              <li>Custom playlist request</li>
+            </ul>
+            <a href="#inquiry" class="btn btn-gold" style="width:100%">Plan Your Night</a>
+          </div>
+
+          <div class="pe-card">
+            <div class="pe-card-icon" aria-hidden="true">🍾</div>
+            <h3 class="pe-card-name">Bottle Service</h3>
+            <p class="pe-card-desc">Premium spirits, personal service, and the best seats in the room. Available every Friday, Saturday, and Sunday.</p>
+            <ul class="pe-card-features" role="list">
+              <li>Premium bottle selection</li>
+              <li>Elite lounge seating</li>
+              <li>Personal bottle host</li>
+              <li>Available Fri · Sat · Sun</li>
+              <li>Mixers &amp; setup included</li>
+            </ul>
+            <a href="#inquiry" class="btn btn-outline" style="width:100%">Reserve Tonight</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- EVENT TYPES -->
+      <section class="pe-types" aria-label="Types of events we host">
+        <span class="pe-section-label">We Host</span>
+        <h2 class="pe-section-title" style="font-size:clamp(28px,4vw,48px);">Every Kind of Celebration</h2>
+        <div class="pe-types-grid" role="list">
+          <div class="pe-type-card" role="listitem">
+            <div class="pe-type-icon" aria-hidden="true">🎂</div>
+            <div class="pe-type-name">Birthdays</div>
+            <p class="pe-type-desc">Classic, Grand, and full-takeover birthday experiences.</p>
+          </div>
+          <div class="pe-type-card" role="listitem">
+            <div class="pe-type-icon" aria-hidden="true">🏢</div>
+            <div class="pe-type-name">Corporate Events</div>
+            <p class="pe-type-desc">Team nights, client entertainment, and company celebrations.</p>
+          </div>
+          <div class="pe-type-card" role="listitem">
+            <div class="pe-type-icon" aria-hidden="true">🔒</div>
+            <div class="pe-type-name">Venue Buyouts</div>
+            <p class="pe-type-desc">Full exclusive access to Josephine Lounge for your event.</p>
+          </div>
+          <div class="pe-type-card" role="listitem">
+            <div class="pe-type-icon" aria-hidden="true">📺</div>
+            <div class="pe-type-name">Watch Parties</div>
+            <p class="pe-type-desc">Big screen, premium cocktails, and an electric atmosphere.</p>
+          </div>
+          <div class="pe-type-card" role="listitem">
+            <div class="pe-type-icon" aria-hidden="true">🎤</div>
+            <div class="pe-type-name">Influencer Events</div>
+            <p class="pe-type-desc">Content creation nights and social-first experiences.</p>
+          </div>
+          <div class="pe-type-card" role="listitem">
+            <div class="pe-type-icon" aria-hidden="true">🌍</div>
+            <div class="pe-type-name">Cultural Events</div>
+            <p class="pe-type-desc">Heritage celebrations, community nights, and diaspora gatherings.</p>
+          </div>
+          <div class="pe-type-card" role="listitem">
+            <div class="pe-type-icon" aria-hidden="true">🎓</div>
+            <div class="pe-type-name">Milestone Celebrations</div>
+            <p class="pe-type-desc">Graduations, promotions, retirements, and life milestones.</p>
+          </div>
+          <div class="pe-type-card" role="listitem">
+            <div class="pe-type-icon" aria-hidden="true">✨</div>
+            <div class="pe-type-name">Private Gatherings</div>
+            <p class="pe-type-desc">Intimate nights with curated experiences for your group.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- INQUIRY FORM -->
+      <section class="pe-form-section" id="inquiry" aria-label="Private event inquiry form">
+        <div class="pe-form-grid">
+          <div class="pe-form-intro">
+            <span class="pe-section-label">Start the Conversation</span>
+            <h2>Plan Your<br><em style="color:var(--gold)">Perfect Night</em></h2>
+            <p>Fill out the form and our events team will reach out within 24 hours to discuss your vision, budget, and all the details that will make your event unforgettable.</p>
+            <div style="margin-top: 32px;">
+              <div class="pe-contact-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.18 19.79 19.79 0 01.22 2.18 2 2 0 012.22 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.09a16 16 0 006 6l.56-.56a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                <span><strong>(678) 973-4441</strong></span>
+              </div>
+              <div class="pe-contact-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span>3277 Buford Highway, Brookhaven, GA 30329</span>
+              </div>
+              <div class="pe-contact-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                <span>Friday – Sunday &nbsp;·&nbsp; 8:00 PM – 2:30 AM</span>
+              </div>
+            </div>
+            <div style="margin-top:32px">
+              <a href="https://wa.me/16789734441?text=Hi%2C%20I%27m%20interested%20in%20a%20private%20event%20at%20Josephine%20Lounge." target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="gap:10px">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Message Us on WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <form class="pe-form" id="peForm" novalidate aria-label="Private event inquiry">
+            <div class="pe-form-row">
+              <div class="pe-form-group">
+                <label class="pe-form-label" for="pe-name">Full Name</label>
+                <input class="pe-input" type="text" id="pe-name" name="name" placeholder="Your name" required autocomplete="name">
+              </div>
+              <div class="pe-form-group">
+                <label class="pe-form-label" for="pe-phone">Phone / WhatsApp</label>
+                <input class="pe-input" type="tel" id="pe-phone" name="phone" placeholder="+1 (000) 000-0000" required autocomplete="tel" inputmode="tel">
+              </div>
+            </div>
+            <div class="pe-form-group">
+              <label class="pe-form-label" for="pe-email">Email</label>
+              <input class="pe-input" type="email" id="pe-email" name="email" placeholder="your@email.com" required autocomplete="email" inputmode="email">
+            </div>
+            <div class="pe-form-row">
+              <div class="pe-form-group">
+                <label class="pe-form-label" for="pe-event-type">Event Type</label>
+                <select class="pe-select" id="pe-event-type" name="eventType" required>
+                  <option value="">Select type</option>
+                  <option>Birthday Celebration</option>
+                  <option>Corporate Event</option>
+                  <option>Venue Buyout</option>
+                  <option>Bottle Service Night</option>
+                  <option>Watch Party</option>
+                  <option>Influencer / Media Event</option>
+                  <option>Cultural / Heritage Celebration</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="pe-form-group">
+                <label class="pe-form-label" for="pe-date">Preferred Date</label>
+                <input class="pe-input" type="date" id="pe-date" name="date" required autocomplete="off">
+              </div>
+            </div>
+            <div class="pe-form-row">
+              <div class="pe-form-group">
+                <label class="pe-form-label" for="pe-guests">Guest Count</label>
+                <select class="pe-select" id="pe-guests" name="guestCount">
+                  <option value="">Select range</option>
+                  <option>Up to 15 guests</option>
+                  <option>16 – 30 guests</option>
+                  <option>31 – 60 guests</option>
+                  <option>60+ guests</option>
+                  <option>Full venue buyout</option>
+                </select>
+              </div>
+              <div class="pe-form-group">
+                <label class="pe-form-label" for="pe-budget">Estimated Budget <span class="pe-form-optional">optional</span></label>
+                <select class="pe-select" id="pe-budget" name="budget">
+                  <option value="">Select range</option>
+                  <option>Under $500</option>
+                  <option>$500 – $1,000</option>
+                  <option>$1,000 – $2,500</option>
+                  <option>$2,500 – $5,000</option>
+                  <option>$5,000+</option>
+                </select>
+              </div>
+            </div>
+            <div class="pe-form-group">
+              <label class="pe-form-label" for="pe-bottle">Bottle Service Interest <span class="pe-form-optional">optional</span></label>
+              <select class="pe-select" id="pe-bottle" name="bottleService">
+                <option value="">Select option</option>
+                <option>Yes — definitely interested</option>
+                <option>Maybe — would like to discuss</option>
+                <option>No — not needed</option>
+              </select>
+            </div>
+            <div class="pe-form-group">
+              <label class="pe-form-label" for="pe-notes">Tell Us More <span class="pe-form-optional">optional</span></label>
+              <textarea class="pe-textarea" id="pe-notes" name="notes" placeholder="Event theme, special requirements, questions for our team..."></textarea>
+            </div>
+            <p class="pe-consent">By submitting this form you agree to be contacted by Josephine Lounge's events team regarding your inquiry. We respect your privacy and will never share your information.</p>
+            <button type="button" class="pe-submit" id="peSubmit">Send My Inquiry</button>
+          </form>
+        </div>
+      </section>
+
+    </div><!-- /.pe-body -->
+  </main>
+
+  <!-- FOOTER -->
+  <footer role="contentinfo">
+    <div class="footer-simple">
+      <div class="footer-simple-left">
+        <picture>
+          <source srcset="../assets/logo/logo.webp" type="image/webp">
+          <img src="../assets/logo/logo.png" alt="Josephine Lounge" width="44" height="44" loading="lazy" decoding="async">
+        </picture>
+      </div>
+      <p class="footer-simple-copy">&copy; 2026 Josephine Lounge · Brookhaven, Atlanta</p>
+      <div class="footer-simple-links">
+        <a href="../index.html">Home</a>
+        <a href="events.html">Events</a>
+        <a href="menu.html">Menu</a>
+        <a href="https://www.instagram.com/josephineatl" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </div>
+    </div>
+    <div style="max-width:1400px;margin:0 auto;padding:0 var(--section-x)">
+      <p class="footer-credit">Site by <a href="https://www.umojaserv.com" target="_blank" rel="noopener noreferrer">UmojaServ</a></p>
+    </div>
+  </footer>
+
+  <div id="pe-toast" style="position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(20px);z-index:9999;min-width:260px;max-width:440px;padding:16px 24px;background:#141414;border:1px solid rgba(200,169,92,.4);color:#F0E6D3;font-family:'Montserrat',sans-serif;font-size:13px;text-align:center;opacity:0;transition:opacity .35s,transform .35s;pointer-events:none" role="alert" aria-live="polite"></div>
+
+  <script>
+  (function(){
+    'use strict';
+    /* Nav */
+    const nav = document.getElementById('nav');
+    let raf = null;
+    window.addEventListener('scroll', () => {
+      if (!raf) raf = requestAnimationFrame(() => { nav.classList.toggle('scrolled', window.scrollY > 60); raf = null; });
+    }, { passive: true });
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+
+    const toggle = document.getElementById('navToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+    const openMenu = () => { toggle.classList.add('active'); mobileMenu.classList.add('open'); mobileMenu.setAttribute('aria-hidden','false'); toggle.setAttribute('aria-expanded','true'); toggle.setAttribute('aria-label','Close menu'); document.body.style.overflow='hidden'; };
+    const closeMenu = () => { toggle.classList.remove('active'); mobileMenu.classList.remove('open'); mobileMenu.setAttribute('aria-hidden','true'); toggle.setAttribute('aria-expanded','false'); toggle.setAttribute('aria-label','Open menu'); document.body.style.overflow=''; };
+    toggle.addEventListener('click', () => mobileMenu.classList.contains('open') ? closeMenu() : openMenu());
+    mobileLinks.forEach(l => l.addEventListener('click', closeMenu));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+
+    /* Toast */
+    const toast = document.getElementById('pe-toast');
+    let toastTimer = null;
+    function showToast(msg, ok) {
+      clearTimeout(toastTimer);
+      toast.textContent = (ok ? '✦ ' : '⚠ ') + msg;
+      toast.style.borderColor = ok ? 'rgba(200,169,92,.4)' : 'rgba(220,80,80,.35)';
+      toast.style.opacity = '1';
+      toast.style.transform = 'translateX(-50%) translateY(0)';
+      toast.style.pointerEvents = 'auto';
+      toastTimer = setTimeout(() => { toast.style.opacity='0'; toast.style.transform='translateX(-50%) translateY(20px)'; toast.style.pointerEvents='none'; }, 5000);
+    }
+
+    /* Form */
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxyCTKaZMis5CexOKllmZpBCcY2fwnkVh6OXQasUfVWoA0ovqCy-Wjr-naXVHCQsaCCIg/exec';
+    const btn = document.getElementById('peSubmit');
+
+    btn.addEventListener('click', async () => {
+      const name      = document.getElementById('pe-name').value.trim();
+      const phone     = document.getElementById('pe-phone').value.trim();
+      const email     = document.getElementById('pe-email').value.trim();
+      const eventType = document.getElementById('pe-event-type').value;
+      const date      = document.getElementById('pe-date').value;
+      const guests    = document.getElementById('pe-guests').value;
+      const budget    = document.getElementById('pe-budget').value;
+      const bottle    = document.getElementById('pe-bottle').value;
+      const notes     = document.getElementById('pe-notes').value.trim();
+
+      if (!name || !phone || !email || !eventType || !date) {
+        showToast('Please complete all required fields.', false); return;
+      }
+
+      btn.disabled = true; btn.textContent = 'Sending…';
+      try {
+        const res = await fetch(SCRIPT_URL, {
+          method: 'POST',
+          cache: 'no-store',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify({ type: 'marketing_lead', name, phone, email, source: 'Private Events Page', notes: `Event: ${eventType} | Date: ${date} | Guests: ${guests} | Budget: ${budget} | Bottle: ${bottle} | Notes: ${notes}` }),
+        });
+        const data = await res.json();
+        if (!data.success) throw new Error();
+        showToast('Your inquiry was received! We\'ll be in touch within 24 hours.', true);
+        document.getElementById('peForm').reset();
+        // Also open WhatsApp with summary
+        const msg = `*Private Event Inquiry — Josephine Lounge*\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Email:* ${email}\n*Event Type:* ${eventType}\n*Date:* ${date}\n*Guests:* ${guests}\n*Budget:* ${budget}\n*Notes:* ${notes}`;
+        setTimeout(() => window.open(`https://wa.me/16789734441?text=${encodeURIComponent(msg)}`, '_blank', 'noopener'), 1500);
+      } catch {
+        // Fallback: open WhatsApp directly
+        const msg = `*Private Event Inquiry*\nName: ${name} | Phone: ${phone} | Event: ${eventType} | Date: ${date} | Guests: ${guests}`;
+        showToast('Connecting you directly via WhatsApp…', true);
+        setTimeout(() => window.open(`https://wa.me/16789734441?text=${encodeURIComponent(msg)}`, '_blank', 'noopener'), 800);
+      } finally {
+        btn.disabled = false; btn.textContent = 'Send My Inquiry';
+      }
+    });
+  })();
+  </script>
+</body>
+</html>

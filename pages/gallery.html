@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#080808">
+  <meta name="robots" content="index, follow">
+  <meta name="description" content="Josephine Lounge photo gallery — Nights to Remember. See the atmosphere, VIP moments, and global energy in Brookhaven, Atlanta.">
+
+  <link rel="canonical" href="https://seashell-owl-921091.hostingersite.com/pages/gallery.html">
+  <link rel="icon" type="image/webp" href="../assets/logo/logo.webp">
+  <link rel="icon" type="image/png" href="../assets/logo/logo.png">
+  <link rel="apple-touch-icon" href="../assets/logo/logo.png">
+
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://josephineatl.com/pages/gallery.html">
+  <meta property="og:title"       content="Gallery — Josephine Lounge Atlanta">
+  <meta property="og:description" content="Nights to Remember. The atmosphere, the energy, the moments at Josephine Lounge.">
+  <meta property="og:image"       content="https://josephineatl.com/assets/images/hero-lounge.webp">
+  <meta property="og:site_name"   content="Josephine Lounge">
+
+  <title>Gallery — Josephine Lounge | Nights to Remember</title>
+
+  <!-- Add GTM snippet here once container ID is confirmed -->
+
+  <style>
+    :root{--black:#080808;--dark:#0d0d0d;--charcoal:#141414;--card:#111111;--border:rgba(200,169,92,.15);--border-dark:rgba(255,255,255,.06);--gold:#C8A95C;--gold-light:#D4BF7A;--gold-dim:rgba(200,169,92,.12);--gold-glow:rgba(200,169,92,.25);--champagne:#D4AF7A;--cream:#F0E6D3;--white:#fff;--off-white:rgba(255,255,255,.88);--muted:rgba(255,255,255,.45);--subtle:rgba(255,255,255,.08);--font-serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;--font-sans:'Montserrat',-apple-system,BlinkMacSystemFont,sans-serif;--ease:cubic-bezier(.25,.46,.45,.94);--ease-out:cubic-bezier(.16,1,.3,1);--nav-h:80px;--section-x:clamp(20px,6vw,80px)}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;scroll-padding-top:var(--nav-h)}
+    body{background:var(--black);color:var(--white);font-family:var(--font-sans);font-weight:300;font-size:16px;line-height:1.75;overflow-x:hidden;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+    img{display:block;max-width:100%;height:auto}
+    a{color:inherit;text-decoration:none}
+    ul{list-style:none}
+    button{cursor:pointer;border:none;background:none;font-family:inherit}
+
+    /* NAV */
+    #nav{position:fixed;top:0;left:0;right:0;z-index:1000;transition:background .5s var(--ease),backdrop-filter .5s}
+    #nav.scrolled{background:rgba(8,8,8,.92);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:var(--nav-h);padding:0 var(--section-x);max-width:1400px;margin:0 auto;width:100%}
+    .nav-logo img{height:60px;width:auto;object-fit:contain;filter:brightness(1.1) drop-shadow(0 0 12px rgba(200,169,92,.2));transition:filter .3s}
+    .nav-links{display:flex;align-items:center;gap:36px}
+    .nav-links a{font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--off-white);transition:color .3s;position:relative}
+    .nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:var(--gold);transition:width .35s var(--ease)}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%}
+    .nav-links .nav-cta{background:transparent;border:1px solid var(--gold);color:var(--gold);padding:10px 22px;font-size:10px;transition:all .35s var(--ease)}
+    .nav-links .nav-cta::after{display:none}
+    .nav-links .nav-cta:hover{background:var(--gold);color:var(--black)}
+    .nav-toggle{display:none;flex-direction:column;gap:6px;padding:4px;min-width:44px;min-height:44px;align-items:center;justify-content:center}
+    .nav-toggle span{display:block;width:24px;height:1px;background:var(--white);transition:all .35s var(--ease);transform-origin:center}
+    .nav-toggle.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .nav-toggle.active span:nth-child(2){opacity:0;transform:scaleX(0)}
+    .nav-toggle.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+    /* MOBILE MENU */
+    .mobile-menu{position:fixed;inset:0;background:rgba(8,8,8,.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);z-index:999;display:flex;flex-direction:column;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:all .45s var(--ease);overscroll-behavior:none}
+    .mobile-menu.open{opacity:1;visibility:visible}
+    .mobile-menu ul{display:flex;flex-direction:column;align-items:center;gap:32px}
+    .mobile-menu a{font-family:var(--font-serif);font-size:clamp(32px,8vw,52px);font-weight:300;color:var(--off-white);letter-spacing:.04em;transition:color .3s;min-height:44px;display:flex;align-items:center}
+    .mobile-menu a:hover{color:var(--gold)}
+    .mobile-menu-cta{margin-top:48px;display:flex;flex-direction:column;align-items:center;gap:16px}
+    .mobile-menu-info{font-size:11px;letter-spacing:.15em;color:var(--muted);text-transform:uppercase;text-align:center}
+
+    /* PAGE HERO */
+    .page-hero{position:relative;height:60vh;min-height:400px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+    .page-hero-bg{position:absolute;inset:0;background-image:url('../assets/images/hero-crowd.webp');background-size:cover;background-position:center;transform:scale(1.04)}
+    .page-hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(8,8,8,.4) 0%,rgba(8,8,8,.15) 40%,rgba(8,8,8,.7) 100%)}
+    .page-hero-content{position:relative;z-index:2;text-align:center;padding:0 24px}
+    .page-hero-content .eyebrow{display:block;font-size:10px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+    .page-hero-content h1{font-family:var(--font-serif);font-size:clamp(52px,8vw,100px);font-weight:300;font-style:italic;line-height:1.05;color:var(--white)}
+    .page-hero-content .hero-sub{font-size:13px;font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:var(--off-white);margin-top:16px;opacity:.8}
+
+    /* BUTTONS */
+    .btn{display:inline-flex;align-items:center;justify-content:center;font-family:var(--font-sans);font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;padding:16px 36px;border:1px solid transparent;transition:all .35s var(--ease);position:relative;overflow:hidden;min-height:44px}
+    .btn-gold{background:var(--gold);color:var(--black);border-color:var(--gold)}
+    .btn-gold:hover{background:var(--gold-light);border-color:var(--gold-light);transform:translateY(-1px);box-shadow:0 8px 30px rgba(200,169,92,.3)}
+    .btn-outline{background:transparent;color:var(--white);border-color:rgba(255,255,255,.35)}
+    .btn-outline:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-1px)}
+
+    /* GALLERY SECTION */
+    .gallery-section{padding:80px var(--section-x)}
+    .gallery-section .container{max-width:1400px;margin:0 auto}
+    .section-header{text-align:center;margin-bottom:60px}
+    .eyebrow{display:inline-block;font-size:10px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+    .gold-line{display:block;width:40px;height:1px;background:var(--gold);margin:20px auto 0}
+
+    .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .gallery-item{position:relative;overflow:hidden;aspect-ratio:1;background:var(--card);cursor:pointer}
+    .gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+    .gallery-item:hover img{transform:scale(1.06)}
+    .gallery-item-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,.6) 0%,transparent 50%);opacity:0;transition:opacity .4s var(--ease)}
+    .gallery-item:hover .gallery-item-overlay{opacity:1}
+
+    /* WIDE ITEMS */
+    .gallery-item.wide{grid-column:span 2}
+
+    /* INSTAGRAM CTA */
+    .instagram-cta{text-align:center;padding:60px var(--section-x) 80px;border-top:1px solid var(--border)}
+    .instagram-cta p{font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:24px}
+    .instagram-cta .ig-handle{font-family:var(--font-serif);font-size:clamp(28px,4vw,48px);font-weight:300;font-style:italic;color:var(--gold);display:block;margin-bottom:32px}
+
+    /* LIGHTBOX */
+    .lightbox{position:fixed;inset:0;background:rgba(8,8,8,.96);z-index:2000;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:opacity .4s var(--ease)}
+    .lightbox.open{opacity:1;visibility:visible}
+    .lightbox-img{max-width:90vw;max-height:88vh;object-fit:contain;border:1px solid var(--border)}
+    .lightbox-close{position:absolute;top:24px;right:24px;font-size:28px;color:var(--off-white);background:none;border:none;cursor:pointer;line-height:1;padding:8px;transition:color .3s}
+    .lightbox-close:hover{color:var(--gold)}
+    .lightbox-prev,.lightbox-next{position:absolute;top:50%;transform:translateY(-50%);font-size:28px;color:var(--off-white);background:rgba(8,8,8,.5);border:1px solid var(--border);padding:12px 18px;cursor:pointer;transition:all .3s;min-height:44px;display:flex;align-items:center}
+    .lightbox-prev{left:16px}
+    .lightbox-next{right:16px}
+    .lightbox-prev:hover,.lightbox-next:hover{color:var(--gold);border-color:var(--gold)}
+
+    /* FOOTER */
+    footer{background:var(--dark);border-top:1px solid var(--border);padding:60px var(--section-x) 32px}
+    .footer-inner{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:48px;padding-bottom:48px;border-bottom:1px solid var(--border-dark)}
+    .footer-brand picture{display:block;margin-bottom:16px}
+    .footer-brand img{height:50px;width:auto}
+    .footer-tagline{font-size:13px;color:var(--muted);line-height:1.6;font-style:italic}
+    .footer-col-title{font-size:9px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
+    .footer-links li{margin-bottom:10px}
+    .footer-links a{font-size:13px;color:var(--muted);transition:color .3s}
+    .footer-links a:hover{color:var(--off-white)}
+    .footer-address{font-size:13px;color:var(--muted);line-height:1.9}
+    .footer-address a{color:var(--muted);transition:color .3s}
+    .footer-address a:hover{color:var(--off-white)}
+    .footer-bottom{max-width:1400px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding-top:28px;flex-wrap:wrap;gap:16px}
+    .footer-copy{font-size:11px;color:var(--muted);letter-spacing:.06em}
+    .footer-social{display:flex;gap:24px}
+    .footer-social a{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);transition:color .3s}
+    .footer-social a:hover{color:var(--gold)}
+    .footer-credit{max-width:1400px;margin:16px auto 0;text-align:center;font-size:11px;color:rgba(255,255,255,.2);letter-spacing:.06em}
+    .footer-credit a{color:rgba(255,255,255,.3);transition:color .3s}
+    .footer-credit a:hover{color:var(--muted)}
+
+    /* ANIMATIONS */
+    @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+    .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s var(--ease-out),transform .7s var(--ease-out)}
+    .reveal.in-view{opacity:1;transform:none}
+
+    /* RESPONSIVE */
+    @media(max-width:900px){
+      .gallery-grid{grid-template-columns:repeat(2,1fr)}
+      .gallery-item.wide{grid-column:span 1}
+      .footer-inner{grid-template-columns:1fr 1fr;gap:32px}
+    }
+    @media(max-width:600px){
+      .gallery-grid{grid-template-columns:repeat(2,1fr);gap:6px}
+      .footer-inner{grid-template-columns:1fr;gap:28px}
+      .footer-bottom{flex-direction:column;align-items:flex-start}
+    }
+    @media(max-width:768px){
+      :root{--nav-h:64px}
+      .nav-links{display:none}
+      .nav-toggle{display:flex}
+      .nav-logo img{height:48px}
+      .lightbox-prev,.lightbox-next{display:none}
+    }
+  </style>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Montserrat:wght@300;500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Montserrat:wght@300;500;600&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Montserrat:wght@300;500;600&display=swap"></noscript>
+
+  <link rel="preload" as="style" href="../assets/css/style.css?v=20260601-2">
+  <link rel="stylesheet" href="../assets/css/style.css?v=20260601-2" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="../assets/css/style.css?v=20260601-2"></noscript>
+
+  <link rel="preload" as="image" href="../assets/images/hero-crowd.webp" fetchpriority="high">
+  <link rel="stylesheet" href="../assets/css/mobile-nav.css?v=20260601-2">
+</head>
+<body>
+
+
+  <!-- NAVIGATION -->
+  <nav id="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo" aria-label="Josephine Lounge — Home">
+        <picture>
+          <source srcset="../assets/logo/logo.webp" type="image/webp">
+          <img src="../assets/logo/logo.png" alt="Josephine Lounge" width="60" height="60" decoding="async">
+        </picture>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="events.html">Events</a></li>
+        <li><a href="gallery.html" class="active">Gallery</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="private-events.html">Private Events</a></li>
+        <li><a href="worldcup.html">World Cup</a></li>
+        <li><a href="../index.html#reservations" class="nav-cta">Reserve</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <ul role="list">
+      <li><a href="events.html" class="mobile-link">Events</a></li>
+      <li><a href="gallery.html" class="mobile-link">Gallery</a></li>
+      <li><a href="menu.html" class="mobile-link">Menu</a></li>
+      <li><a href="private-events.html" class="mobile-link">Private Events</a></li>
+      <li><a href="worldcup.html" class="mobile-link">World Cup 2026</a></li>
+      <li><a href="../careers.html" class="mobile-link">Join the Team</a></li>
+    </ul>
+    <div class="mobile-menu-cta">
+      <a href="../index.html#reservations" class="btn btn-gold mobile-link" style="min-width:220px;justify-content:center;">Reserve Your Table</a>
+      <a href="tel:+16789734441" class="mobile-phone-link">(678) 973-4441</a>
+      <p class="mobile-menu-info">Fri – Sun &nbsp;·&nbsp; 8PM – 2:30AM</p>
+    </div>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero" aria-label="Gallery hero">
+    <div class="page-hero-bg" role="img" aria-label="Josephine Lounge crowd and atmosphere"></div>
+    <div class="page-hero-overlay" aria-hidden="true"></div>
+    <div class="page-hero-content">
+      <span class="eyebrow">The Atmosphere</span>
+      <h1>Nights to Remember</h1>
+      <p class="hero-sub">Josephine Lounge &nbsp;·&nbsp; Brookhaven, Atlanta</p>
+    </div>
+  </section>
+
+  <!-- GALLERY GRID -->
+  <section class="gallery-section" aria-label="Photo gallery">
+    <div class="container">
+      <div class="gallery-grid" id="galleryGrid" role="list">
+
+        <div class="gallery-item wide reveal" role="listitem" data-index="0">
+          <img src="../assets/images/hero-lounge.webp" alt="Josephine Lounge nightlife atmosphere" loading="eager" decoding="async" width="750" height="500">
+          <div class="gallery-item-overlay" aria-hidden="true"></div>
+        </div>
+
+        <div class="gallery-item reveal" role="listitem" data-index="1">
+          <img src="../assets/images/vip-section.webp" alt="VIP section at Josephine Lounge" loading="lazy" decoding="async" width="500" height="500">
+          <div class="gallery-item-overlay" aria-hidden="true"></div>
+        </div>
+
+        <div class="gallery-item reveal" role="listitem" data-index="2">
+          <img src="../assets/images/hero-afrobeat-night.webp" alt="Afrobeat night at Josephine Lounge" loading="lazy" decoding="async" width="500" height="500">
+          <div class="gallery-item-overlay" aria-hidden="true"></div>
+        </div>
+
+        <div class="gallery-item reveal" role="listitem" data-index="3">
+          <img src="../assets/images/hero-vip-night.webp" alt="VIP night at Josephine Lounge" loading="lazy" decoding="async" width="500" height="500">
+          <div class="gallery-item-overlay" aria-hidden="true"></div>
+        </div>
+
+        <div class="gallery-item wide reveal" role="listitem" data-index="4">
+          <img src="../assets/images/gallery-nightlife-scene.webp" alt="Josephine Lounge nightlife scene" loading="lazy" decoding="async" width="750" height="500">
+          <div class="gallery-item-overlay" aria-hidden="true"></div>
+        </div>
+
+        <div class="gallery-item reveal" role="listitem" data-index="5">
+          <img src="../assets/images/gallery-october-event.webp" alt="October event at Josephine Lounge" loading="lazy" decoding="async" width="500" height="500">
+          <div class="gallery-item-overlay" aria-hidden="true"></div>
+        </div>
+
+        <div class="gallery-item reveal" role="listitem" data-index="6">
+          <img src="../assets/images/gallery-november-event.webp" alt="November event at Josephine Lounge" loading="lazy" decoding="async" width="500" height="500">
+          <div class="gallery-item-overlay" aria-hidden="true"></div>
+        </div>
+
+        <div class="gallery-item reveal" role="listitem" data-index="7">
+          <img src="../assets/images/gallery-august-event.webp" alt="August event at Josephine Lounge" loading="lazy" decoding="async" width="500" height="500">
+          <div class="gallery-item-overlay" aria-hidden="true"></div>
+        </div>
+
+        <div class="gallery-item reveal" role="listitem" data-index="8">
+          <img src="../assets/images/gallery-celebration.webp" alt="Celebration night at Josephine Lounge" loading="lazy" decoding="async" width="500" height="500">
+          <div class="gallery-item-overlay" aria-hidden="true"></div>
+        </div>
+
+        <div class="gallery-item wide reveal" role="listitem" data-index="9">
+          <img src="../assets/images/gallery-lounge-area.webp" alt="Lounge area at Josephine" loading="lazy" decoding="async" width="750" height="500">
+          <div class="gallery-item-overlay" aria-hidden="true"></div>
+        </div>
+
+        <div class="gallery-item reveal" role="listitem" data-index="10">
+          <img src="../assets/images/gallery-december-event.webp" alt="December event at Josephine Lounge" loading="lazy" decoding="async" width="500" height="500">
+          <div class="gallery-item-overlay" aria-hidden="true"></div>
+        </div>
+
+        <div class="gallery-item reveal" role="listitem" data-index="11">
+          <img src="../assets/images/gallery-guest-portrait.webp" alt="Guest portrait at Josephine Lounge" loading="lazy" decoding="async" width="500" height="500">
+          <div class="gallery-item-overlay" aria-hidden="true"></div>
+        </div>
+
+        <div class="gallery-item reveal" role="listitem" data-index="12">
+          <img src="../assets/images/gallery-dj-set.webp" alt="DJ set at Josephine Lounge" loading="lazy" decoding="async" width="500" height="500">
+          <div class="gallery-item-overlay" aria-hidden="true"></div>
+        </div>
+
+        <div class="gallery-item wide reveal" role="listitem" data-index="13">
+          <img src="../assets/images/hero-crowd.webp" alt="Crowd at Josephine Lounge" loading="lazy" decoding="async" width="750" height="500">
+          <div class="gallery-item-overlay" aria-hidden="true"></div>
+        </div>
+
+        <div class="gallery-item reveal" role="listitem" data-index="14">
+          <img src="../assets/images/monarch-saturday.webp" alt="Monarch Saturdays at Josephine Lounge" loading="lazy" decoding="async" width="500" height="500">
+          <div class="gallery-item-overlay" aria-hidden="true"></div>
+        </div>
+
+        <div class="gallery-item reveal" role="listitem" data-index="15">
+          <img src="../assets/images/soft-life-sunday.webp" alt="Soft Life Sunday at Josephine Lounge" loading="lazy" decoding="async" width="500" height="500">
+          <div class="gallery-item-overlay" aria-hidden="true"></div>
+        </div>
+
+        <div class="gallery-item reveal" role="listitem" data-index="16">
+          <img src="../assets/images/riddim-nights.webp" alt="Riddim Nights at Josephine Lounge" loading="lazy" decoding="async" width="500" height="500">
+          <div class="gallery-item-overlay" aria-hidden="true"></div>
+        </div>
+
+        <div class="gallery-item wide reveal" role="listitem" data-index="17">
+          <img src="../assets/images/lounge-atmosphere.webp" alt="Lounge atmosphere at Josephine" loading="lazy" decoding="async" width="750" height="500">
+          <div class="gallery-item-overlay" aria-hidden="true"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTAGRAM CTA -->
+  <div class="instagram-cta">
+    <p>Follow our story</p>
+    <a href="https://www.instagram.com/josephineatl" target="_blank" rel="noopener noreferrer" class="ig-handle">@josephineatl</a>
+    <a href="https://www.instagram.com/josephineatl" target="_blank" rel="noopener noreferrer" class="btn btn-gold">Follow on Instagram</a>
+  </div>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+    <button class="lightbox-prev" id="lightboxPrev" aria-label="Previous image">&#8592;</button>
+    <img class="lightbox-img" id="lightboxImg" src="" alt="" loading="lazy">
+    <button class="lightbox-next" id="lightboxNext" aria-label="Next image">&#8594;</button>
+  </div>
+
+  <!-- FOOTER -->
+  <footer role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <picture>
+          <source srcset="../assets/logo/logo.webp" type="image/webp">
+          <img src="../assets/logo/logo.png" alt="Josephine Lounge" width="50" height="50" loading="lazy" decoding="async">
+        </picture>
+        <p class="footer-tagline">"Where global culture meets<br>Atlanta's finest nights."</p>
+      </div>
+      <div>
+        <p class="footer-col-title">Navigate</p>
+        <ul class="footer-links" role="list">
+          <li><a href="events.html">Events</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="menu.html">Menu &amp; Cocktails</a></li>
+          <li><a href="private-events.html">Private Events</a></li>
+          <li><a href="worldcup.html">World Cup 2026</a></li>
+          <li><a href="../index.html#reservations">Reservations</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Experience</p>
+        <ul class="footer-links" role="list">
+          <li><a href="events.html">Monarch Saturdays</a></li>
+          <li><a href="events.html">Soft Life Sunday</a></li>
+          <li><a href="events.html">Riddim Nights</a></li>
+          <li><a href="private-events.html">Birthday Packages</a></li>
+          <li><a href="../careers.html">Join the Team</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Contact</p>
+        <address class="footer-address" style="font-style:normal;">
+          3277 Buford Highway<br>
+          Brookhaven, GA 30329<br><br>
+          <a href="tel:+16789734441">(678) 973-4441</a><br><br>
+          Fri · Sat · Sun<br>
+          8:00 PM – 2:30 AM<br><br>
+          <a href="mailto:jobs@josephineatl.com">jobs@josephineatl.com</a>
+        </address>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2026 Josephine Lounge · Brookhaven, Atlanta, GA · All rights reserved.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/josephineatl" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://wa.me/16789734441" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a href="careers.html">Careers</a>
+      </div>
+    </div>
+    <div class="footer-credit">
+      Site by <a href="https://www.umojaserv.com" target="_blank" rel="noopener noreferrer">UmojaServ</a>
+    </div>
+  </footer>
+
+  <script>
+    // Nav scroll
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+
+    // Mobile menu
+    const navToggle = document.getElementById('navToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    navToggle.addEventListener('click', () => {
+      const open = mobileMenu.classList.toggle('open');
+      navToggle.classList.toggle('active', open);
+      navToggle.setAttribute('aria-expanded', open);
+      mobileMenu.setAttribute('aria-hidden', !open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+    document.querySelectorAll('.mobile-link').forEach(l => {
+      l.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        navToggle.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+        mobileMenu.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      });
+    });
+
+    // Reveal on scroll
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); observer.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    reveals.forEach(r => observer.observe(r));
+
+    // Lightbox
+    const items = Array.from(document.querySelectorAll('.gallery-item'));
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    let currentIndex = 0;
+
+    function openLightbox(index) {
+      currentIndex = index;
+      const img = items[index].querySelector('img');
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function navigate(dir) {
+      currentIndex = (currentIndex + dir + items.length) % items.length;
+      const img = items[currentIndex].querySelector('img');
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+    }
+
+    items.forEach((item, i) => item.addEventListener('click', () => openLightbox(i)));
+    document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+    document.getElementById('lightboxPrev').addEventListener('click', () => navigate(-1));
+    document.getElementById('lightboxNext').addEventListener('click', () => navigate(1));
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+    document.addEventListener('keydown', e => {
+      if (!lightbox.classList.contains('open')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') navigate(-1);
+      if (e.key === 'ArrowRight') navigate(1);
+    });
+  </script>
+</body>
+</html>
